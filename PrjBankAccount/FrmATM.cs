@@ -16,5 +16,10 @@ namespace PrjBankAccount
         {
             InitializeComponent();
         }
+
+        private void FrmATM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
