@@ -16,5 +16,17 @@ namespace PrjBankAccount
         {
             InitializeComponent();
         }
+
+        private void mnuQuit_Click(object sender, EventArgs e)
+        {
+            string info = "Are you sure you want to Quit ?";
+            string title = "Application Closing Warning ";
+
+            if (MessageBox.Show(info,title, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Hand)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
     }
 }

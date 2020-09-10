@@ -1,0 +1,10 @@
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.csprojAssemblyReference.cache
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.FrmMain.resources
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.Properties.Resources.resources
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.csproj.GenerateResource.cache
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.csproj.CoreCompileInputs.cache
+A:\C#\Bank-ATM-\PrjBankAccount\bin\Debug\PrjBankAccount.exe.config
+A:\C#\Bank-ATM-\PrjBankAccount\bin\Debug\PrjBankAccount.exe
+A:\C#\Bank-ATM-\PrjBankAccount\bin\Debug\PrjBankAccount.pdb
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.exe
+A:\C#\Bank-ATM-\PrjBankAccount\obj\Debug\PrjBankAccount.pdb
