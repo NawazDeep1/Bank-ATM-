@@ -28,5 +28,12 @@ namespace PrjBankAccount
             }
 
         }
+
+        private void mnuATM_Click(object sender, EventArgs e)
+        {
+            FrmATM myfrm = new FrmATM();
+            myfrm.MdiParent = this;
+            myfrm.Show();
+        }
     }
 }

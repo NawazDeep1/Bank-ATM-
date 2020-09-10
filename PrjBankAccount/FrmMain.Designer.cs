@@ -76,6 +76,7 @@
             this.mnuATM.Name = "mnuATM";
             this.mnuATM.Size = new System.Drawing.Size(184, 22);
             this.mnuATM.Text = "Bank ATM";
+            this.mnuATM.Click += new System.EventHandler(this.mnuATM_Click);
             // 
             // mnuQuit
             // 

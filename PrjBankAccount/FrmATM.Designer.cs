@@ -34,6 +34,7 @@
             this.btnNextNum = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.txtPin = new System.Windows.Forms.TextBox();
             this.btnNextPin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,18 +43,17 @@
             this.cboAccount = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblWithdraw = new System.Windows.Forms.Label();
+            this.lblDeposit = new System.Windows.Forms.Label();
+            this.radConsult = new System.Windows.Forms.RadioButton();
+            this.radWithdraw = new System.Windows.Forms.RadioButton();
+            this.radDeposit = new System.Windows.Forms.RadioButton();
             this.txtWithdraw = new System.Windows.Forms.TextBox();
             this.txtDeposit = new System.Windows.Forms.TextBox();
             this.btnNextTransaction = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblAccountInfo = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.radDeposit = new System.Windows.Forms.RadioButton();
-            this.radWithdraw = new System.Windows.Forms.RadioButton();
-            this.radConsult = new System.Windows.Forms.RadioButton();
             this.btnTerminate = new System.Windows.Forms.Button();
-            this.lblDeposit = new System.Windows.Forms.Label();
-            this.lblWithdraw = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,6 +102,7 @@
             this.btnNextNum.TabIndex = 1;
             this.btnNextNum.Text = "Next >>";
             this.btnNextNum.UseVisualStyleBackColor = true;
+            this.btnNextNum.Click += new System.EventHandler(this.btnNextNum_Click);
             // 
             // label2
             // 
@@ -129,6 +130,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pin Verification";
             // 
+            // lblWelcome
+            // 
+            this.lblWelcome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lblWelcome.Location = new System.Drawing.Point(19, 18);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(209, 33);
+            this.lblWelcome.TabIndex = 0;
+            // 
             // txtPin
             // 
             this.txtPin.Location = new System.Drawing.Point(128, 63);
@@ -145,6 +156,7 @@
             this.btnNextPin.TabIndex = 1;
             this.btnNextPin.Text = "Next >>";
             this.btnNextPin.UseVisualStyleBackColor = true;
+            this.btnNextPin.Click += new System.EventHandler(this.btnNextPin_Click);
             // 
             // label3
             // 
@@ -181,6 +193,7 @@
             this.btnNextAccount.TabIndex = 1;
             this.btnNextAccount.Text = "Next >>";
             this.btnNextAccount.UseVisualStyleBackColor = true;
+            this.btnNextAccount.Click += new System.EventHandler(this.btnNextAccount_Click);
             // 
             // cboAccount
             // 
@@ -220,12 +233,77 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Types of Transactions";
             // 
+            // lblWithdraw
+            // 
+            this.lblWithdraw.AutoSize = true;
+            this.lblWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWithdraw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblWithdraw.Location = new System.Drawing.Point(255, 51);
+            this.lblWithdraw.Name = "lblWithdraw";
+            this.lblWithdraw.Size = new System.Drawing.Size(13, 13);
+            this.lblWithdraw.TabIndex = 3;
+            this.lblWithdraw.Text = "$";
+            // 
+            // lblDeposit
+            // 
+            this.lblDeposit.AutoSize = true;
+            this.lblDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeposit.ForeColor = System.Drawing.Color.Lime;
+            this.lblDeposit.Location = new System.Drawing.Point(255, 26);
+            this.lblDeposit.Name = "lblDeposit";
+            this.lblDeposit.Size = new System.Drawing.Size(13, 13);
+            this.lblDeposit.TabIndex = 3;
+            this.lblDeposit.Text = "$";
+            // 
+            // radConsult
+            // 
+            this.radConsult.AutoSize = true;
+            this.radConsult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radConsult.ForeColor = System.Drawing.Color.Black;
+            this.radConsult.Location = new System.Drawing.Point(9, 75);
+            this.radConsult.Name = "radConsult";
+            this.radConsult.Size = new System.Drawing.Size(67, 17);
+            this.radConsult.TabIndex = 3;
+            this.radConsult.TabStop = true;
+            this.radConsult.Text = "Consult";
+            this.radConsult.UseVisualStyleBackColor = true;
+            this.radConsult.CheckedChanged += new System.EventHandler(this.radConsult_CheckedChanged);
+            // 
+            // radWithdraw
+            // 
+            this.radWithdraw.AutoSize = true;
+            this.radWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radWithdraw.ForeColor = System.Drawing.Color.Black;
+            this.radWithdraw.Location = new System.Drawing.Point(9, 52);
+            this.radWithdraw.Name = "radWithdraw";
+            this.radWithdraw.Size = new System.Drawing.Size(78, 17);
+            this.radWithdraw.TabIndex = 3;
+            this.radWithdraw.TabStop = true;
+            this.radWithdraw.Text = "Withdraw";
+            this.radWithdraw.UseVisualStyleBackColor = true;
+            this.radWithdraw.CheckedChanged += new System.EventHandler(this.radWithdraw_CheckedChanged);
+            // 
+            // radDeposit
+            // 
+            this.radDeposit.AutoSize = true;
+            this.radDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radDeposit.ForeColor = System.Drawing.Color.Black;
+            this.radDeposit.Location = new System.Drawing.Point(9, 29);
+            this.radDeposit.Name = "radDeposit";
+            this.radDeposit.Size = new System.Drawing.Size(68, 17);
+            this.radDeposit.TabIndex = 3;
+            this.radDeposit.TabStop = true;
+            this.radDeposit.Text = "Deposit";
+            this.radDeposit.UseVisualStyleBackColor = true;
+            this.radDeposit.CheckedChanged += new System.EventHandler(this.radDeposit_CheckedChanged);
+            // 
             // txtWithdraw
             // 
             this.txtWithdraw.Location = new System.Drawing.Point(128, 51);
             this.txtWithdraw.Name = "txtWithdraw";
             this.txtWithdraw.Size = new System.Drawing.Size(121, 22);
             this.txtWithdraw.TabIndex = 2;
+            this.txtWithdraw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWithdraw_KeyPress);
             // 
             // txtDeposit
             // 
@@ -233,6 +311,7 @@
             this.txtDeposit.Name = "txtDeposit";
             this.txtDeposit.Size = new System.Drawing.Size(121, 22);
             this.txtDeposit.TabIndex = 2;
+            this.txtDeposit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeposit_KeyPress);
             // 
             // btnNextTransaction
             // 
@@ -243,6 +322,7 @@
             this.btnNextTransaction.TabIndex = 0;
             this.btnNextTransaction.Text = "Next >>";
             this.btnNextTransaction.UseVisualStyleBackColor = true;
+            this.btnNextTransaction.Click += new System.EventHandler(this.btnNextTransaction_Click);
             // 
             // groupBox5
             // 
@@ -264,55 +344,6 @@
             this.lblAccountInfo.Size = new System.Drawing.Size(382, 82);
             this.lblAccountInfo.TabIndex = 0;
             // 
-            // lblWelcome
-            // 
-            this.lblWelcome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
-            this.lblWelcome.Location = new System.Drawing.Point(19, 18);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(209, 33);
-            this.lblWelcome.TabIndex = 0;
-            // 
-            // radDeposit
-            // 
-            this.radDeposit.AutoSize = true;
-            this.radDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radDeposit.ForeColor = System.Drawing.Color.Black;
-            this.radDeposit.Location = new System.Drawing.Point(9, 29);
-            this.radDeposit.Name = "radDeposit";
-            this.radDeposit.Size = new System.Drawing.Size(68, 17);
-            this.radDeposit.TabIndex = 3;
-            this.radDeposit.TabStop = true;
-            this.radDeposit.Text = "Deposit";
-            this.radDeposit.UseVisualStyleBackColor = true;
-            // 
-            // radWithdraw
-            // 
-            this.radWithdraw.AutoSize = true;
-            this.radWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radWithdraw.ForeColor = System.Drawing.Color.Black;
-            this.radWithdraw.Location = new System.Drawing.Point(9, 52);
-            this.radWithdraw.Name = "radWithdraw";
-            this.radWithdraw.Size = new System.Drawing.Size(78, 17);
-            this.radWithdraw.TabIndex = 3;
-            this.radWithdraw.TabStop = true;
-            this.radWithdraw.Text = "Withdraw";
-            this.radWithdraw.UseVisualStyleBackColor = true;
-            // 
-            // radConsult
-            // 
-            this.radConsult.AutoSize = true;
-            this.radConsult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radConsult.ForeColor = System.Drawing.Color.Black;
-            this.radConsult.Location = new System.Drawing.Point(9, 75);
-            this.radConsult.Name = "radConsult";
-            this.radConsult.Size = new System.Drawing.Size(67, 17);
-            this.radConsult.TabIndex = 3;
-            this.radConsult.TabStop = true;
-            this.radConsult.Text = "Consult";
-            this.radConsult.UseVisualStyleBackColor = true;
-            // 
             // btnTerminate
             // 
             this.btnTerminate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -323,28 +354,7 @@
             this.btnTerminate.TabIndex = 0;
             this.btnTerminate.Text = "<< TERMINATE >>";
             this.btnTerminate.UseVisualStyleBackColor = true;
-            // 
-            // lblDeposit
-            // 
-            this.lblDeposit.AutoSize = true;
-            this.lblDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeposit.ForeColor = System.Drawing.Color.Lime;
-            this.lblDeposit.Location = new System.Drawing.Point(255, 26);
-            this.lblDeposit.Name = "lblDeposit";
-            this.lblDeposit.Size = new System.Drawing.Size(13, 13);
-            this.lblDeposit.TabIndex = 3;
-            this.lblDeposit.Text = "$";
-            // 
-            // lblWithdraw
-            // 
-            this.lblWithdraw.AutoSize = true;
-            this.lblWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWithdraw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblWithdraw.Location = new System.Drawing.Point(255, 51);
-            this.lblWithdraw.Name = "lblWithdraw";
-            this.lblWithdraw.Size = new System.Drawing.Size(13, 13);
-            this.lblWithdraw.TabIndex = 3;
-            this.lblWithdraw.Text = "$";
+            this.btnTerminate.Click += new System.EventHandler(this.btnTerminate_Click);
             // 
             // FrmATM
             // 
