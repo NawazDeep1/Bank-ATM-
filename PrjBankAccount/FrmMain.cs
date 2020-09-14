@@ -35,5 +35,12 @@ namespace PrjBankAccount
             myfrm.MdiParent = this;
             myfrm.Show();
         }
+
+        private void mnuOOP_Click(object sender, EventArgs e)
+        {
+            ResultofOOP myfrm = new ResultofOOP();
+            myfrm.MdiParent = this;
+            myfrm.Show();
+        }
     }
 }
