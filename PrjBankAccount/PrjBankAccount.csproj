@@ -46,7 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="clsAccount.cs" />
+    <Compile Include="clsATM.cs" />
+    <Compile Include="clsClient.cs" />
     <Compile Include="clsDate.cs" />
+    <Compile Include="clsListAccount.cs" />
+    <Compile Include="clsListClient.cs" />
+    <Compile Include="clsStudent.cs" />
     <Compile Include="clsTime.cs" />
     <Compile Include="FrmATM.cs">
       <SubType>Form</SubType>
@@ -86,6 +93,7 @@
     <EmbeddedResource Include="ResultofOOP.resx">
       <DependentUpon>ResultofOOP.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
